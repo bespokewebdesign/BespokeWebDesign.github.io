@@ -1,5 +1,6 @@
 import './App.css';
 import React from 'react';
+import { ReactComponent as BWDLogo } from './icons/bwd.svg'
 import { Navbar, NavItem, NavBurger, DropdownMenu } from './components/Navbar'
 
 function App() {
@@ -7,7 +8,7 @@ function App() {
   return (
     <div className="content-wrapper">
       <Navbar>
-        <NavItem icon="HF" location="https://harrisfauntleroy.dev/" />
+        <NavItem icon={BWDLogo} location="https://harrisfauntleroy.dev/" />
         <NavBurger>
           <DropdownMenu />
         </NavBurger>

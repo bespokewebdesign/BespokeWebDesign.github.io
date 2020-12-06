@@ -103,14 +103,14 @@ export function DropdownMenu() {
                         Projects
           </DropdownItem>
 
-          <DropdownItem
+                    <DropdownItem
                         leftIcon={<PeopleIcon />}
                         rightIcon={<ArrowRightIcon />}
                         goToMenu="personal">
                         Socials
           </DropdownItem>
-                    
-          <DropdownItem
+
+                    <DropdownItem
                         leftIcon={<LinkIcon />}
                         rightIcon={<ArrowRightIcon />}
                         goToMenu="links">
