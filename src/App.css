@@ -22,7 +22,6 @@ body {
   scroll-behavior: smooth;
   padding: 0;
   margin: 0;
-  background: url(https://images.unsplash.com/photo-1597773150796-e5c14ebecbf5?ixlib=rb-1.2.1&auto=format&fit=crop&w=2100&q=80);
   color: var(--text-color);
 }
 
@@ -36,8 +35,6 @@ body {
   flex: 1;
   padding: 0 1rem;
   margin: 1em;
-  background-color: var(--bg1);
-  opacity: 0.9;
   border: var(--border);
   border-radius: var(--border-radius);
 }
@@ -96,6 +93,22 @@ a {
   transition: filter 300ms;
 }
 
+.logo-a {
+  --button-size: calc(var(--nav-size) * 1);
+  width: var(--button-size);
+  height: var(--button-size);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: filter 300ms;
+}
+
+#logo-svg {
+  fill: var(--text-color);
+  width: 40px;
+  height: 40px;
+}
+
 .icon-button:hover {
   filter: brightness(1.2);
 }
@@ -105,6 +118,11 @@ a {
   fill: var(--text-color);
   width: 20px;
   height: 20px;
+}
+
+.hamburger svg {
+  width: 40px;
+  height: 40px;
 }
 
 /* Dropdown Menu */

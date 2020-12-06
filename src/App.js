@@ -1,13 +1,13 @@
 import './App.css';
 import React from 'react';
-import { Navbar, NavItem, NavBurger, DropdownMenu } from './components/Navbar'
+import { Navbar, NavBurger, DropdownMenu, Logo } from './components/Navbar'
 
 function App() {
 
   return (
     <div className="content-wrapper">
       <Navbar>
-        <NavItem icon="HF" location="https://harrisfauntleroy.dev/" />
+        <Logo />
         <NavBurger>
           <DropdownMenu />
         </NavBurger>
@@ -15,7 +15,7 @@ function App() {
       <div className="container">
         <h1>Coming soon...</h1>
       </div>
-      <footer>&copy; 2020 Harris Fauntleroy</footer>
+      <footer>&copy; 2020 Bespoke Web Design</footer>
     </div>
   );
 }
