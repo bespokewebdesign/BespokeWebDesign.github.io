@@ -1,12 +1,13 @@
 :root {
   --bg: #000000;
-  --bg1: #242424;
+  --bg1: #242333;
   --bg2: #4d4d4d;
   --bg3: #757575;
 
   --text-color: #ffffff;
 
   --nav-size: 60px;
+  --footer-size: 20px;
   --border: 1px solid #757575;
   --border-radius: 8px;
   --speed: 500ms;
@@ -32,15 +33,23 @@ body {
 }
 
 .container {
-  flex: 1;
-  padding: 0 1rem;
-  margin: 1em;
-  border: var(--border);
-  border-radius: var(--border-radius);
+  height: calc(100vh - 109px);
+  padding: 1.5rem;
+  color: #000000;
+}
+
+.container h1 {
+  margin: 0;
+}
+
+.container:nth-child(odd) {
+  /* background: #242333; */
+  /* color: #fff; */
 }
 
 footer {
   display: flex;
+  height: var(--footer-size);
   align-items: center;
   justify-content: center;
   border-top: var(--border);
@@ -58,11 +67,16 @@ a {
   text-decoration: none;
 }
 
+.active {
+  transform: scale(1.5);
+}
+
 .navbar {
   height: var(--nav-size);
   background-color: var(--bg1);
-  padding: 0 1rem;
   border-bottom: var(--border);
+  position: sticky;
+  top: 0;
 }
 
 .navbar-nav {
@@ -72,18 +86,24 @@ a {
   justify-content: space-between;
 }
 
+.desktop {
+  width: 100%;
+  justify-content: space-evenly;
+}
+
 .nav-item {
   width: calc(var(--nav-size) * 0.8);
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: 0 0.5rem;
 }
 
 .icon-button {
   --button-size: calc(var(--nav-size) * 0.5);
   width: var(--button-size);
   height: var(--button-size);
-  background-color: var(--bg2);
+  background-color: var(--bg1);
   border-radius: 50%;
   padding: 5px;
   margin: 2px;
@@ -130,14 +150,18 @@ a {
 .dropdown {
   position: absolute;
   top: 60px;
-  width: 300px;
-  transform: translateX(-38%);
+  width: 155px;
+  transform: translateX(-34%);
   background-color: var(--bg1);
   border: var(--border);
   padding: 1rem;
   overflow: hidden;
   transition: height var(--speed) ease;
   z-index: 1;
+}
+
+.dropdown + .container {
+  filter: blur(9);
 }
 
 .menu-item {
@@ -150,7 +174,7 @@ a {
 }
 
 .menu-item:hover {
-  background-color: #525357;
+  background-color: #494764;
 }
 
 .icon-right {
@@ -232,4 +256,18 @@ a {
   stroke-dasharray: 90 207;
   stroke-dashoffset: -134;
   stroke-width: 6;
+}
+
+/* ------------ Media Queries ------------ */
+
+@media only screen and (max-width: 965px) {
+  .link {
+    display: none;
+  }
+}
+
+@media only screen and (min-width: 964px) {
+  .mobile-menu {
+    display: none;
+  }
 }

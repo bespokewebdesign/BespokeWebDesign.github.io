@@ -1,17 +1,19 @@
 import React, { useState, useRef, useEffect } from 'react';
+import { Link, animateScroll as scroll } from "react-scroll";
 import { CSSTransition } from 'react-transition-group'
-import { ReactComponent as UserIcon } from '../icons/user-solid.svg'
 import { ReactComponent as TwitterIcon } from '../icons/twitter-brands.svg'
 import { ReactComponent as InstagramIcon } from '../icons/instagram-brands.svg'
-import { ReactComponent as SlackIcon } from '../icons/slack-brands.svg'
+import { ReactComponent as HomeIcon } from '../icons/home-solid.svg'
 import { ReactComponent as LinkedInIcon } from '../icons/linkedin-brands.svg'
 import { ReactComponent as LinkIcon } from '../icons/link-solid.svg'
 import { ReactComponent as InstructablesIcon } from '../icons/instructables.svg'
 import { ReactComponent as HamburgerIcon } from '../icons/hamburger.svg'
 import { ReactComponent as GithubIcon } from '../icons/github-brands.svg'
 import { ReactComponent as DiscordIcon } from '../icons/discord-brands.svg'
-import { ReactComponent as GearIcon } from '../icons/cog-solid.svg'
-import { ReactComponent as PeopleIcon } from '../icons/users-solid.svg'
+import { ReactComponent as EmailIcon } from '../icons/envelope-solid.svg'
+import { ReactComponent as ConciergeIcon } from '../icons/concierge-bell-solid.svg'
+import { ReactComponent as DollarIcon } from '../icons/dollar-sign-solid.svg'
+import { ReactComponent as QuestionIcon } from '../icons/question-solid.svg'
 import { ReactComponent as ArrowRightIcon } from '../icons/arrow-right-solid.svg'
 import { ReactComponent as ArrowLeftIcon } from '../icons/arrow-left-solid.svg'
 
@@ -43,7 +45,7 @@ export function NavBurger(props) {
     const [open, setOpen] = useState(false);
 
     return (
-        <li className="nav-item">
+        <li className="nav-item mobile-menu">
             <a
                 href="#"
                 className={`icon-button hamburger ${open ? "opened" : ""}`}
@@ -105,9 +107,28 @@ export function DropdownMenu() {
         setMenuHeight(height);
     }
 
+    function DropdownItemInternal(props) {
+        return (
+            <Link
+                to={props.to}
+                smooth={true}
+                offset={-61}
+                duration={500}
+                className="menu-item"
+                onClick={() => props.goToMenu && setActiveMenu(props.goToMenu)}>
+                <span className="icon-button">{props.leftIcon}</span>
+                {props.children}
+                {/* <span className="icon-right">{props.rightIcon}</span> */}
+            </Link>
+        )
+    }
+
     function DropdownItem(props) {
         return (
-            <a href={props.location} className="menu-item" onClick={() => props.goToMenu && setActiveMenu(props.goToMenu)}>
+            <a
+                href={props.location}
+                className="menu-item"
+                onClick={() => props.goToMenu && setActiveMenu(props.goToMenu)}>
                 <span className="icon-button">{props.leftIcon}</span>
                 {props.children}
                 {/* <span className="icon-right">{props.rightIcon}</span> */}
@@ -125,32 +146,39 @@ export function DropdownMenu() {
                 unmountOnExit
                 onEnter={calcHeight}>
                 <div className="menu">
-                    <DropdownItem
-                        leftIcon={<UserIcon />}
-                        location="https://harrisfauntleroy.dev/resume/"
-                    >Resume
-                    </DropdownItem>
+                    <DropdownItemInternal
+                        leftIcon={<HomeIcon />}
+                        to="1"
+                    >Home
+                    </DropdownItemInternal>
 
-                    <DropdownItem
-                        leftIcon={<GearIcon />}
+                    <DropdownItemInternal
+                        leftIcon={<ConciergeIcon />}
                         rightIcon={<ArrowRightIcon />}
-                        goToMenu="projects">
-                        Projects
-          </DropdownItem>
+                        to="2"
+                    >Services
+          </DropdownItemInternal>
 
-                    <DropdownItem
-                        leftIcon={<PeopleIcon />}
+                    <DropdownItemInternal
+                        leftIcon={<DollarIcon />}
                         rightIcon={<ArrowRightIcon />}
-                        goToMenu="personal">
-                        Socials
-          </DropdownItem>
+                        to="3"
+                    >Pricing
+          </DropdownItemInternal>
 
-                    <DropdownItem
-                        leftIcon={<LinkIcon />}
+                    <DropdownItemInternal
+                        leftIcon={<EmailIcon />}
                         rightIcon={<ArrowRightIcon />}
-                        goToMenu="links">
-                        Links
-          </DropdownItem>
+                        to="4"
+                    >Contact
+          </DropdownItemInternal>
+
+                    <DropdownItemInternal
+                        leftIcon={<QuestionIcon />}
+                        rightIcon={<ArrowRightIcon />}
+                        to="5"
+                    >About
+          </DropdownItemInternal>
 
                 </div>
             </CSSTransition>
