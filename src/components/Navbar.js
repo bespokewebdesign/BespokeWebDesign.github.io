@@ -5,7 +5,6 @@ import { ReactComponent as TwitterIcon } from '../icons/twitter-brands.svg'
 import { ReactComponent as InstagramIcon } from '../icons/instagram-brands.svg'
 import { ReactComponent as HomeIcon } from '../icons/home-solid.svg'
 import { ReactComponent as LinkedInIcon } from '../icons/linkedin-brands.svg'
-import { ReactComponent as LinkIcon } from '../icons/link-solid.svg'
 import { ReactComponent as InstructablesIcon } from '../icons/instructables.svg'
 import { ReactComponent as HamburgerIcon } from '../icons/hamburger.svg'
 import { ReactComponent as GithubIcon } from '../icons/github-brands.svg'
@@ -16,6 +15,7 @@ import { ReactComponent as DollarIcon } from '../icons/dollar-sign-solid.svg'
 import { ReactComponent as QuestionIcon } from '../icons/question-solid.svg'
 import { ReactComponent as ArrowRightIcon } from '../icons/arrow-right-solid.svg'
 import { ReactComponent as ArrowLeftIcon } from '../icons/arrow-left-solid.svg'
+import { useSpring } from 'react-spring';
 
 export function Navbar(props) {
     return (
@@ -108,6 +108,12 @@ export function DropdownMenu() {
     }
 
     function DropdownItemInternal(props) {
+
+        const tits = useSpring({
+            opacity: 1,
+            from: { opacity: 0 },
+        })
+
         return (
             <Link
                 to={props.to}
@@ -116,7 +122,7 @@ export function DropdownMenu() {
                 duration={500}
                 className="menu-item"
                 onClick={() => props.goToMenu && setActiveMenu(props.goToMenu)}>
-                <span className="icon-button">{props.leftIcon}</span>
+                <span style={tits} className="icon-button">{props.leftIcon}</span>
                 {props.children}
                 {/* <span className="icon-right">{props.rightIcon}</span> */}
             </Link>

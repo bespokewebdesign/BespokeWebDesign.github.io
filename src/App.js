@@ -1,7 +1,7 @@
 import './App.css';
 import React from 'react';
-import { Navbar, NavBurger, DropdownMenu, Logo, NavItem } from './components/Navbar'
-import { Link, animateScroll as scroll } from "react-scroll";
+import { Navbar, NavBurger, DropdownMenu, Logo } from './components/Navbar'
+import { Link } from "react-scroll";
 
 function App() {
 
