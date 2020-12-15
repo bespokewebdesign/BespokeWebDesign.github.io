@@ -1,3 +1,5 @@
+/* Unity theme */
+
 :root {
   --bg: #000000;
   --bg1: #242333;
@@ -5,6 +7,9 @@
   --bg3: #757575;
 
   --text-color: #ffffff;
+  --text-color1: #ffffff;
+  --text-color2: #ffffff;
+  --text-color3: #ffffff;
 
   --nav-size: 60px;
   --footer-size: 20px;
@@ -14,47 +19,16 @@
 }
 
 body {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-  max-width: 100vw;
-  font-family: "-apple-system, BlinkMacSystemFont, sans-serif";
   -webkit-font-smoothing: antialiased;
   scroll-behavior: smooth;
   padding: 0;
   margin: 0;
+  background: var(--bg1);
   color: var(--text-color);
-  background: url(https://images.unsplash.com/photo-1510519138101-570d1dca3d66?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1331&q=80);
-}
-
-.content-wrapper {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-}
-
-.container {
-  height: calc(100vh - 109px);
-  padding: 1.5rem;
-  color: #000000;
 }
 
 .container h1 {
   margin: 0;
-}
-
-.container:nth-child(odd) {
-  /* background: #242333; */
-  /* color: #fff; */
-}
-
-footer {
-  display: flex;
-  height: var(--footer-size);
-  align-items: center;
-  justify-content: center;
-  border-top: var(--border);
-  background-color: var(--bg1);
 }
 
 ul {
@@ -73,11 +47,11 @@ a {
 }
 
 .navbar {
+  display: grid;
+  grid-area: navbar;
   height: var(--nav-size);
   background-color: var(--bg1);
   border-bottom: var(--border);
-  position: sticky;
-  top: 0;
 }
 
 .navbar-nav {
