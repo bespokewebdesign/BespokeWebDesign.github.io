@@ -1,35 +1,24 @@
 {
   "files": {
-    "main.css": "/static/css/main.77ff95e5.chunk.css",
-    "main.js": "/static/js/main.727c07ba.chunk.js",
-    "main.js.map": "/static/js/main.727c07ba.chunk.js.map",
+    "main.css": "/static/css/main.f71f880a.chunk.css",
+    "main.js": "/static/js/main.7655215e.chunk.js",
+    "main.js.map": "/static/js/main.7655215e.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.74c49455.js",
     "runtime-main.js.map": "/static/js/runtime-main.74c49455.js.map",
-    "static/js/2.ce2a7de3.chunk.js": "/static/js/2.ce2a7de3.chunk.js",
-    "static/js/2.ce2a7de3.chunk.js.map": "/static/js/2.ce2a7de3.chunk.js.map",
+    "static/css/2.27be3ef1.chunk.css": "/static/css/2.27be3ef1.chunk.css",
+    "static/js/2.0c78ab77.chunk.js": "/static/js/2.0c78ab77.chunk.js",
+    "static/js/2.0c78ab77.chunk.js.map": "/static/js/2.0c78ab77.chunk.js.map",
     "index.html": "/index.html",
-    "static/css/main.77ff95e5.chunk.css.map": "/static/css/main.77ff95e5.chunk.css.map",
-    "static/js/2.ce2a7de3.chunk.js.LICENSE.txt": "/static/js/2.ce2a7de3.chunk.js.LICENSE.txt",
-    "static/media/arrow-left-solid.b27e2493.svg": "/static/media/arrow-left-solid.b27e2493.svg",
-    "static/media/arrow-right-solid.2db90993.svg": "/static/media/arrow-right-solid.2db90993.svg",
-    "static/media/concierge-bell-solid.7b7fadf8.svg": "/static/media/concierge-bell-solid.7b7fadf8.svg",
-    "static/media/discord-brands.a6bf2a68.svg": "/static/media/discord-brands.a6bf2a68.svg",
-    "static/media/dollar-sign-solid.b41b747e.svg": "/static/media/dollar-sign-solid.b41b747e.svg",
-    "static/media/envelope-solid.80b23b18.svg": "/static/media/envelope-solid.80b23b18.svg",
-    "static/media/github-brands.e2f07326.svg": "/static/media/github-brands.e2f07326.svg",
-    "static/media/hamburger.a9254e53.svg": "/static/media/hamburger.a9254e53.svg",
-    "static/media/home-solid.831db11d.svg": "/static/media/home-solid.831db11d.svg",
-    "static/media/instagram-brands.90a80cd5.svg": "/static/media/instagram-brands.90a80cd5.svg",
-    "static/media/instructables.3b52df40.svg": "/static/media/instructables.3b52df40.svg",
-    "static/media/link-solid.7b689dbd.svg": "/static/media/link-solid.7b689dbd.svg",
-    "static/media/linkedin-brands.f4041044.svg": "/static/media/linkedin-brands.f4041044.svg",
-    "static/media/question-solid.10f55fd6.svg": "/static/media/question-solid.10f55fd6.svg",
-    "static/media/twitter-brands.87682341.svg": "/static/media/twitter-brands.87682341.svg"
+    "static/css/2.27be3ef1.chunk.css.map": "/static/css/2.27be3ef1.chunk.css.map",
+    "static/css/main.f71f880a.chunk.css.map": "/static/css/main.f71f880a.chunk.css.map",
+    "static/js/2.0c78ab77.chunk.js.LICENSE.txt": "/static/js/2.0c78ab77.chunk.js.LICENSE.txt",
+    "static/media/all.min.css": "/static/media/fa-solid-900.46fdbd2d.woff"
   },
   "entrypoints": [
     "static/js/runtime-main.74c49455.js",
-    "static/js/2.ce2a7de3.chunk.js",
-    "static/css/main.77ff95e5.chunk.css",
-    "static/js/main.727c07ba.chunk.js"
+    "static/css/2.27be3ef1.chunk.css",
+    "static/js/2.0c78ab77.chunk.js",
+    "static/css/main.f71f880a.chunk.css",
+    "static/js/main.7655215e.chunk.js"
   ]
 }
