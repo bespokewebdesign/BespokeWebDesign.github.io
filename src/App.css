@@ -1,3 +1,9 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 /* Unity theme */
 
 :root {
@@ -19,12 +25,44 @@
 }
 
 body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
   -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   scroll-behavior: smooth;
   padding: 0;
   margin: 0;
-  background: var(--bg1);
-  color: var(--text-color);
+  /* background: url(https://source.unsplash.com/random); */
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+/* 
+Ignore, testing glassmorphism, doesnt work with firefox. blur filter unsupported
+.glass {
+  display: inline-block;
+  width: 300px;
+  z-index: 1;
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(40px);
+  -moz-backdrop-filter: blur(40px);
+  border: solid 2px transparent;
+  background-clip: padding-box;
+  border-radius: 3em;
+  padding: 3em;
+  color: black;
+  box-shadow: 10px 10px 10px (rgba(46, 54, 68, 0.03));
+} */
+
+#tsparticles {
+  z-index: -2;
+  position: fixed;
+  filter: blur(10);
+  height: 100vh;
 }
 
 .container h1 {
@@ -38,7 +76,7 @@ ul {
 }
 
 a {
-  color: var(--text-color);
+  color: #000000;
   text-decoration: none;
 }
 
@@ -50,8 +88,8 @@ a {
   display: grid;
   grid-area: navbar;
   height: var(--nav-size);
-  background-color: var(--bg1);
   border-bottom: var(--border);
+  background-color: white;
 }
 
 .navbar-nav {
@@ -78,7 +116,6 @@ a {
   --button-size: calc(var(--nav-size) * 0.5);
   width: var(--button-size);
   height: var(--button-size);
-  background-color: var(--bg1);
   border-radius: 50%;
   padding: 5px;
   margin: 2px;
@@ -99,7 +136,7 @@ a {
 }
 
 #logo-svg {
-  fill: var(--text-color);
+  fill: black;
   width: 40px;
   height: 40px;
 }
@@ -110,14 +147,14 @@ a {
 
 .icon-button svg,
 .icon-right svg {
-  fill: var(--text-color);
-  width: 20px;
-  height: 20px;
+  fill: black;
+  width: 50px;
+  height: 50px;
 }
 
 .hamburger svg {
-  width: 40px;
-  height: 40px;
+  width: 80px;
+  height: 80px;
 }
 
 /* Dropdown Menu */
@@ -127,12 +164,15 @@ a {
   top: 60px;
   width: 155px;
   transform: translateX(-34%);
-  background-color: var(--bg1);
-  border: var(--border);
+  background-color: white;
+  border-top: var(--border);
+  border-bottom: var(--border);
+  border-left: var(--border);
   padding: 1rem;
   overflow: hidden;
   transition: height var(--speed) ease;
   z-index: 1;
+  border-radius: 0 0 0 1em;
 }
 
 .dropdown:is .container {
@@ -149,7 +189,7 @@ a {
 }
 
 .menu-item:hover {
-  background-color: #494764;
+  background-color: rgba(0, 0, 0, 0.2);
 }
 
 .icon-right {
@@ -200,7 +240,7 @@ a {
 
 .line {
   fill: none;
-  stroke: var(--text-color);
+  stroke: white;
   stroke-width: 6;
   transition: stroke-dasharray 600ms cubic-bezier(0.4, 0, 0.2, 1),
     stroke-dashoffset 600ms cubic-bezier(0.4, 0, 0.2, 1);
