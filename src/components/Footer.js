@@ -146,7 +146,7 @@ export const Footer = () => {
               <div className='text-sm text-gray-600 font-semibold py-1'>
                 <span>Copyright © {new Date().getFullYear()} </span>
                 <a
-                  href='https://www.studio.icvn.tech?ref=internal_footer'
+                  href='https://www.bespokewebdesign.com.au'
                   className='text-gray-600 hover:text-gray-900'>
                   Bespoke Web Design
                 </a>
